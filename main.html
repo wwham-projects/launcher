@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Scratch</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1e1e1e;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      font-size: 2rem;
+      padding: 30px 60px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #ffcc00;
+      color: #000;
+    }
+
+    button:hover {
+      background: #ffdb4d;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="goToScratch()">Start Scratch</button>
+
+  <script>
+    function goToScratch() {
+      // Open background tab (browser decides focus)
+      window.open(
+        "https://projects.raspberrypi.org/en/technology/scratch",
+        "_blank",
+        "noopener,noreferrer"
+      );
+
+      // Redirect current tab
+      window.location.href = "https://scratch.mit.edu/projects/editor";
+    }
+  </script>
+
+</body>
+</html>
