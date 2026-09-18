@@ -1,0 +1,100 @@
+/* Shared Scratch-inspired colours and typography. */
+.bright-theme {
+  color-scheme: light;
+  --bg: #f5f1ff;
+  --panel: #fff;
+  --text: #332c49;
+  --muted: #625b75;
+  --lime: #6740b3;
+  --line: #e1d8ef;
+  background: var(--bg);
+  font-family: "Trebuchet MS", ui-rounded, system-ui, sans-serif;
+}
+.bright-theme::before {
+  background: radial-gradient(#855cd617 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+.bright-theme .site-header {
+  max-width: none;
+  background: #855cd6;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #7448c4;
+}
+.bright-theme .brand-mark {
+  background: #fff;
+  color: #855cd6;
+}
+.bright-theme h1 {
+  font-weight: 900;
+  letter-spacing: -1.8px;
+}
+.bright-theme h1 span {
+  color: #b65b00;
+}
+.bright-theme .eyebrow {
+  color: #6740b3;
+  font-size: 11px;
+}
+.bright-theme .site-footer { color: #625b75; }
+
+/* Keep the launch action prominent, with softer supporting shortcuts. */
+.launcher-page .staff-label {
+  color: #fff;
+  border-color: #ffffff55;
+  background: #ffffff12;
+}
+.launcher-page .status-dot { background: #ffdf80; }
+.launcher-page .launch-button {
+  background: #ffcf55;
+  color: #553b00;
+  border: 2px solid #e9b437;
+  border-radius: 24px;
+  box-shadow: 0 6px 0 #dfaa31, 0 16px 40px #855cd614;
+}
+.launcher-page .launch-button:hover {
+  background: #ffda79;
+  box-shadow: 0 9px 0 #dfaa31, 0 20px 40px #855cd61c;
+}
+.launcher-page .launch-button:active {
+  box-shadow: 0 3px 0 #dfaa31;
+}
+.launcher-page .launch-top .eyebrow,
+.launcher-page .launch-hint { color: #6e4b00; }
+.launcher-page .tab-count {
+  background: #fff5d366;
+  border-color: #a06d0040;
+}
+.launcher-page .play-icon { background: #855cd6; color: #fff; }
+.launcher-page .launch-bottom { border-color: #a06d0040; }
+.launcher-page .shortcuts { margin-top: 28px; }
+.launcher-page .shortcut {
+  border: 2px solid #e1d8ef;
+  border-radius: 20px;
+  box-shadow: 0 4px 0 #e9e0f6;
+}
+.launcher-page .shortcut:hover {
+  background: #faf8ff;
+  border-color: #b79add;
+}
+.launcher-page .shortcut-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+.launcher-page .purple { color: #6740b3; background: #eee5ff; }
+.launcher-page .orange { color: #855100; background: #fff0ce; }
+.launcher-page .blue { color: #235da6; background: #e7f1ff; }
+.launcher-page .pink { color: #a2396b; background: #fce6f0; }
+.launcher-page .small-arrow { color: #79678f; }
+.bright-theme .site-header a:focus-visible { outline-color: #ffdf80; }
+
+@media (min-width: 901px) {
+  .launcher-page .shortcuts-with-python { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .launcher-page .shortcuts-with-python { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

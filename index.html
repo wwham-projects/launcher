@@ -2,50 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Open Scratch</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #1e1e1e;
-      font-family: Arial, sans-serif;
-    }
-
-    button {
-      font-size: 2rem;
-      padding: 30px 60px;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      background: #ffcc00;
-      color: #000;
-    }
-
-    button:hover {
-      background: #ffdb4d;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#855cd6">
+  <title>Launchpad · Wirral Code Club</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="launcher.js" defer></script>
 </head>
-<body>
-
-  <button onclick="goToScratch()">Start Scratch</button>
-
-  <script>
-    function goToScratch() {
-      // Open background tab (browser decides focus)
-      window.open(
-        "https://projects.raspberrypi.org/en/technology/scratch",
-        "_blank",
-        "noopener,noreferrer"
-      );
-
-      // Redirect current tab
-      window.location.href = "https://scratch.mit.edu/projects/editor";
-    }
-  </script>
-
+<body class="launcher-page bright-theme">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Wirral Code Club launchpad"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>WIRRAL<span class="brand-sub">CODE CLUB</span></span></a>
+    <span class="staff-label"><span class="status-dot"></span> STAFF LAUNCHPAD</span>
+  </header>
+  <main class="launchpad">
+    <div class="page-heading"><span class="eyebrow">LESS SETUP. MORE MAKING.</span><h1>Ready, set, <span>code.</span></h1></div>
+    <button class="launch-button" type="button" data-launch>
+      <span class="launch-top"><span class="eyebrow">LET’S MAKE SOMETHING</span><span class="tab-count">2 TABS <span aria-hidden="true">↗</span></span></span>
+      <span class="launch-main"><span class="play-icon" aria-hidden="true">▶</span><span>Start Scratch</span><span class="launch-arrow" aria-hidden="true">↗</span></span>
+      <span class="launch-bottom"><span>Scratch editor <span class="plus">+</span> Raspberry Pi projects</span><span class="launch-hint">One click. Ready to create.</span></span>
+    </button>
+    <nav class="shortcuts shortcuts-with-python" aria-label="Quick links">
+      <a class="shortcut" href="getting-started.html"><span class="shortcut-top"><span class="shortcut-icon purple" aria-hidden="true">▤</span><span class="small-arrow" aria-hidden="true">→</span></span><span class="shortcut-title">Scratch guide</span><span class="shortcut-caption">The first-session guide</span></a>
+      <a class="shortcut" href="getting-started-python.html"><span class="shortcut-top"><span class="shortcut-icon blue" aria-hidden="true">Py</span><span class="small-arrow" aria-hidden="true">→</span></span><span class="shortcut-title">Python guide</span><span class="shortcut-caption">Start with the browser editor</span></a>
+      <a class="shortcut" href="https://scratch.mit.edu/projects/1369737725/editor/"><span class="shortcut-top"><span class="shortcut-icon orange" aria-hidden="true">⚑</span><span class="small-arrow" aria-hidden="true">↗</span></span><span class="shortcut-title">Scratch demo</span><span class="shortcut-caption">Open the example project</span></a>
+      <a class="shortcut" href="https://wirralcodeclub.org/"><span class="shortcut-top"><span class="shortcut-icon blue" aria-hidden="true">&lt;/&gt;</span><span class="small-arrow" aria-hidden="true">↗</span></span><span class="shortcut-title">Code Club</span><span class="shortcut-caption">Visit our website</span></a>
+      <a class="shortcut" href="https://www.eventbrite.co.uk/o/wirral-code-club-51245302553"><span class="shortcut-top"><span class="shortcut-icon pink" aria-hidden="true">▦</span><span class="small-arrow" aria-hidden="true">↗</span></span><span class="shortcut-title">Bookings</span><span class="shortcut-caption">Find a session on Eventbrite</span></a>
+    </nav>
+  </main>
+  <footer class="site-footer"><span>Small steps. Big ideas.</span><span>WIRRAL CODE CLUB <span aria-hidden="true">✳</span></span></footer>
 </body>
 </html>
